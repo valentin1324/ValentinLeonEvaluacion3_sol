@@ -1,0 +1,53 @@
+﻿@model List<Categoria>
+
+<div class="card m-3" >
+   
+    <div class="card-body">
+        <h5 class="card-title">Agregar Musica</h5>
+        <p class="card-text">Favor Ingrese, Modifique o Elimine Musica.</p>
+        <a  class="btn btn-outline-primary"><i class="fa-solid fa-circle-plus"></i> Agregar Musica</a>
+    </div>
+</div>
+
+<div>
+
+    <table class="table table-striped">
+        <thead>
+
+            <tr>
+                <th>IdCancion</th>
+                <th>Titulo</th>
+                <th>Artista</th>
+                <th>Album</th>
+                <th>Duracion</th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+
+            @foreach (var Musica in Model)
+            {
+              <tr>
+                    <td>@Musica.ID_CANCION</td>
+                    <td>@Musica.Titulo </td>
+                    <td>@Musica.Artista</td>
+                    <td>@Musica.Album</td>
+                    <td>@Musica.Duracion</td>
+                    <td><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i> </td>
+
+
+                </tr>
+
+            }
+
+
+        </tbody>
+
+
+
+
+    </table>
+
+
+</div>
